@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
       unoptimized: true,
    },
    // base
-   basePath: '/qrcode',
-   assetPrefix: '/qrcode/',
+   //  basePath: '/qrcode',
+   //  assetPrefix: '/qrcode/',
 };
 
 export default nextConfig;
