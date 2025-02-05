@@ -3,11 +3,13 @@ import Image from "next/image"
 export default function QRCodePage() {
   const qrCodes = [
     {
-      title: "QR Code Répértoire des fermes aquacoles",
+      title: "Répértoire des fermes aquacoles",
+      title_2: "Registry of Aquaculture Farms",
       image: "/qrcode/QR-Code-Répértoire-des-fermes-aquacoles.svg?height=400&width=400",
     },
     {
-      title: "QR Code Guide des procédures",
+      title: "Guide des procédures",
+      title_2: "Procedures Guide",
       image: "/qrcode/QR-Code-Guide-des-procédures.svg?height=400&width=400",
     },
     // {
@@ -30,14 +32,16 @@ export default function QRCodePage() {
       </div>
 
       {/* QR Codes Grid */}
+      {/* md:grid-cols-2 */}
       <div className="container flex justify-center mt-32 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full max-w-[1200px]">
+        <div className="grid grid-cols-1  gap-16 w-full max-w-[1200px]">
           {qrCodes.map((qr, index) => (
             <div key={index} className="flex flex-col items-center">
               {/* Speech Bubble Title */}
               <div className="relative mb-4">
                 <div className="bg-[#00A7E1] text-white px-8 py-4 rounded-[2rem] text-2xl font-semibold">
-                  {qr.title}
+                  {qr.title} <br />
+                  {qr.title_2}
                 </div>
                 {/* Triangle for Speech Bubble */}
                 <div
