@@ -30,18 +30,42 @@ export default function QRCodePage() {
   ]
 
   // Auto switch every 15 minutes if autoSwitch is enabled
+  // useEffect(() => {
+  //   function updateSection() {
+  //     if (!autoSwitch) return
+
+  //     const now = new Date()
+  //     const minutes = now.getMinutes()
+  //     const seconds = now.getSeconds()
+
+  //     // Switch every 15 minutes (0, 15, 30, 45 minutes past the hour)
+  //     setShowQRCodes(minutes < 15 || (minutes >= 30 && minutes < 45))
+  //   }
+
+  //   // Initial update
+  //   updateSection()
+
+  //   // Set up interval to check every second
+  //   const interval = setInterval(updateSection, 1000)
+
+  //   return () => clearInterval(interval)
+  // }, [autoSwitch])
+
   useEffect(() => {
-    if (!autoSwitch) return
+    if (!autoSwitch) return;
 
-    const interval = setInterval(
-      () => {
-        setShowQRCodes((prev) => !prev)
-      },
-      15 * 60 * 1000,
-    ) // 15 minutes in milliseconds
+    const interval = setInterval(() => {
+      setShowQRCodes((prev) => !prev);
+    }, 3000); // Toggle every 3 seconds
 
-    return () => clearInterval(interval)
-  }, [autoSwitch])
+    return () => clearInterval(interval);
+  }, [autoSwitch]);
+
+  console.log("showQRCodes", showQRCodes);
+
+
+
+  console.log("showQRCodes", showQRCodes);
 
   return (
     <main className="min-h-screen bg-white flex flex-col items-center py-12" style={{
