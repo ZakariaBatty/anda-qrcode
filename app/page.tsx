@@ -4,11 +4,11 @@ export default function QRCodePage() {
   const qrCodes = [
     {
       title: "QR Code Répértoire des fermes aquacoles",
-      image: "/QR-Code-Répértoire-des-fermes-aquacoles.svg?height=400&width=400",
+      image: "/qrcode/QR-Code-Répértoire-des-fermes-aquacoles.svg?height=400&width=400",
     },
     {
       title: "QR Code Guide des procédures",
-      image: "/QR-Code-Guide-des-procédures.svg?height=400&width=400",
+      image: "/qrcode/QR-Code-Guide-des-procédures.svg?height=400&width=400",
     },
     // {
     //   title: "Farm Locations",
