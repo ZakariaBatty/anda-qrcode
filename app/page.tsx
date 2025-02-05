@@ -21,14 +21,16 @@ export default function QRCodePage() {
   ]
 
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center py-12">
+    <main className="min-h-screen bg-white flex flex-col items-center py-12" style={{
+      backgroundImage: `url('/qrcode/bg.jpg')`,
+    }}>
       {/* Logo Section */}
       <div className="mb-12">
-        <Image src="Logo.svg" alt="Company Logo" width={200} height={80} className="h-20 w-auto" priority />
+        <Image src="/qrcode/Logo.svg" alt="Company Logo" width={400} height={80} className="h-36 w-auto" priority />
       </div>
 
       {/* QR Codes Grid */}
-      <div className="container flex justify-center px-4">
+      <div className="container flex justify-center mt-32 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full max-w-[1200px]">
           {qrCodes.map((qr, index) => (
             <div key={index} className="flex flex-col items-center">
